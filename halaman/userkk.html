@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
+    <title>Halaman Kartu Keluarga</title>
+    <p style="color: whitesmoke; font-size:38px; background-color: blueviolet;"><b>Pemrograman Web Lanjut</b></p>
+    <p style="color: whitesmoke; font-size:25px; background-color: midnightblue;"><b>Tabel Kartu Keluarga</b></p>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: cornflowerblue;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: yellow;
+        }
+
+        nav ul li a:hover {
+            color: midnightblue;
+        }
+
+        p {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            background-color: dodgerblue;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+
+        th {
+            background-color: midnightblue;
+            color: whitesmoke;
+        }
+        td {
+            color: white;
+        }
+        footer {
+            background-color: dimgrey;
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            font-size: 10px;
+            color: yellow;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1 style="color:whitesmoke; background-color: orange; padding:2px;">This is Halaman Kartu Keluarga</h1>
+<hr style="border: 2px solid whitesmoke; margin: 10px 0;">
+<table id="kk" class="display">
+    <thead>
+    <tr>
+        <th style="text-align: center">ID</th>
+        <th style="text-align: center">Name</th>
+        <th style="text-align: center">City</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>0020207201</td>
+        <td>John Doe</td>
+        <td>Chicago</td>
+    </tr>
+    <tr>
+        <td>0020207202</td>
+        <td>Bernard Christian</td>
+        <td>Bandung</td>
+    </tr>
+    <tr>
+        <td>0020207203</td>
+        <td>Susan Bones</td>
+        <td>New York</td>
+    </tr>
+    <tr>
+        <td>0020207204</td>
+        <td>Toni</td>
+        <td>Seattle</td>
+    </tr>
+    </tbody>
+</table>
+<hr style="border: 2px solid whitesmoke; margin: 10px 0;">
+<br>
+<nav>
+    <ul>
+        <li style="font-size: 25px; background-color: slategray; border-radius: 3px; padding:5px;"><a href="?menu=role"><b>Log out</b></a></li>
+        <li style="font-size: 25px; background-color: slategray; border-radius: 3px; padding:5px;"><a href="?menu=pendudukuser"><b>Penduduk</b></a></li>
+    </ul>
+</nav>
+<br>
+<footer><marquee style="color:white; font-size:15px;"><b>Universitas Kristen Maranatha</b></marquee></footer>
+<script>
+    $(document).ready(function() {
+        $("#kk").DataTable();
+    });
+</script>
+</body>
+</html>

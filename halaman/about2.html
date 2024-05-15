@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
+    <title>Halaman Penduduk</title>
+    <p style="color: whitesmoke; font-size:38px; background-color: blueviolet"><b>Pemrograman Web Lanjut</b></p>
+    <p style="color: whitesmoke; font-size:25px; background-color: darkcyan"><b>Tabel Penduduk</b></p>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: darkseagreen;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: yellow;
+        }
+
+        nav ul li a:hover {
+            color: lightseagreen;
+        }
+
+        p {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            background-color: limegreen;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        th {
+            background-color: darkcyan;
+            color: whitesmoke;
+        }
+        td {
+            color: white;
+        }
+        footer {
+            background-color: dimgrey;
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            font-size: 10px;
+            color: yellow;
+            padding: 5px;
+        }
+
+        .b1 {
+            display: inline-block;
+            padding: 10px 22px;
+            text-decoration: none;
+            background-color: greenyellow;
+            color: whitesmoke;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+
+        .b2 {
+            display: inline-block;
+            padding: 10px 22px;
+            text-decoration: none;
+            background-color: red;
+            color: whitesmoke;
+            text-decoration: none;
+            border-radius: 2px;
+            margin-right: 5px;
+        }
+
+        .box {
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .b1:hover {
+            background-color: orange;
+        }
+
+        .b2:hover {
+            background-color: orange;
+        }
+
+        p2 {
+            border-radius: 3px;
+            margin-left: 20px;
+        }
+
+        .b {
+            display: inline-block;
+            padding: 10px 22px;
+            text-decoration: none;
+            background-color: midnightblue;
+            color: whitesmoke;
+            text-decoration: none;
+            border-radius: 2px;
+            margin-left: 10px;
+        }
+
+        .b:hover {
+            background-color: orange;
+        }
+
+    </style>
+</head>
+<body>
+<h1 style="color:whitesmoke; background-color: orange; padding:2px;">This is Halaman Penduduk</h1>
+<a href="#" class="b"><b>Add Data</b></a>
+<br>
+<br>
+<hr style="border: 2px solid whitesmoke; margin: 10px 0;">
+<table id="penduduk" class="display">
+    <thead>
+    <tr>
+        <th style="text-align: center">ID</th>
+        <th style="text-align: center">Name</th>
+        <th style="text-align: center">Gender</th>
+        <th style="text-align: center">Age</th>
+        <th style="text-align: center">Religion</th>
+        <th style="text-align: center">City</th>
+        <th style="text-align: center">Address</th>
+        <th style="text-align: center">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>0020207201</td>
+        <td>John Doe</td>
+        <td>Male</td>
+        <td>30</td>
+        <td>Christian</td>
+        <td>Chicago</td>
+        <td>Town Street</td>
+        <td>
+            <div class="box">
+                <a href="#" class="b1"><b>Edit</b></a>
+                <a href="#" class="b2"><b>Delete</b></a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>0020207202</td>
+        <td>Bernard Christian</td>
+        <td>Male</td>
+        <td>20</td>
+        <td>Christian</td>
+        <td>Bandung</td>
+        <td>Jl Kopo</td>
+        <td>
+            <div class="box">
+                <a href="#" class="b1"><b>Edit</b></a>
+                <a href="#" class="b2"><b>Delete</b></a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>0020207203</td>
+        <td>Susan Bones</td>
+        <td>Female</td>
+        <td>21</td>
+        <td>Christian</td>
+        <td>New York</td>
+        <td>Town Street</td>
+        <td>
+            <div class="box">
+                <a href="#" class="b1"><b>Edit</b></a>
+                <a href="#" class="b2"><b>Delete</b></a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>0020207204</td>
+        <td>Toni</td>
+        <td>Male</td>
+        <td>17</td>
+        <td>Christian</td>
+        <td>Seattle</td>
+        <td>China Street</td>
+        <td>
+            <div class="box">
+                <a href="#" class="b1"><b>Edit</b></a>
+                <a href="#" class="b2"><b>Delete</b></a>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<hr style="border: 2px solid whitesmoke; margin: 10px 0;">
+<br>
+<nav>
+    <ul>
+        <li style="font-size: 25px; background-color: dimgrey; border-radius: 3px; padding:5px;"><a href="?menu=home"><b>Home</b></a></li>
+        <li style="font-size: 25px; background-color: dimgrey; border-radius: 3px; padding:5px;"><a href="?menu=about"><b>KartuKeluarga</b></a></li>
+    </ul>
+</nav>
+<br>
+<footer><marquee style="color:white; font-size:15px;"><b>Universitas Kristen Maranatha</b></marquee></footer>
+<script>
+    $(document).ready(function() {
+        $("#penduduk").DataTable();
+    });
+</script>
+</body>
+</html>
